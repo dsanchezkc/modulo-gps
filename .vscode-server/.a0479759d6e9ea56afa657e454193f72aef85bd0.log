@@ -1,0 +1,46 @@
+
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+IP Address: 172.31.7.147
+Extension host agent listening on 42813
+
+
+[14:27:02] Extension host agent started.
+[14:27:03] [127.0.0.1][5ee89658][ManagementConnection] New connection established.
+[14:27:03] [127.0.0.1][c27e3bbe][ExtensionHostConnection] New connection established.
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+[14:27:03] [127.0.0.1][c27e3bbe][ExtensionHostConnection] <3075> Launched Extension Host Process.
+[14:27:30] [127.0.0.1][5ee89658][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[14:27:31] [127.0.0.1][c27e3bbe][ExtensionHostConnection] <3075> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[14:27:31] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[14:27:33] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[14:27:33] Cancelling previous shutdown timeout
+[14:27:33] [127.0.0.1][9d7c30ce][ManagementConnection] New connection established.
+[14:27:33] [127.0.0.1][9ca463df][ExtensionHostConnection] New connection established.
+[14:27:33] [127.0.0.1][9ca463df][ExtensionHostConnection] <3213> Launched Extension Host Process.
+[14:27:36] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[14:32:04] Installing extension: ms-python.python
+[14:32:05] Downloaded extension: ms-python.python /home/centos/.vscode-server/data/CachedExtensionVSIXs/ms-python.python-2020.8.108011
+[14:32:09] Extracted extension to /home/centos/.vscode-server/extensions/.ms-python.python-2020.8.108011: ms-python.python
+[14:32:09] Renamed to /home/centos/.vscode-server/extensions/ms-python.python-2020.8.108011
+[14:32:09] Installation completed. ms-python.python
+[14:32:09] Extensions installed successfully: ms-python.python
+New EH opened, aborting shutdown
+[14:32:33] New EH opened, aborting shutdown
+[14:45:06] [127.0.0.1][9d7c30ce][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[14:45:07] [127.0.0.1][9ca463df][ExtensionHostConnection] <3213> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[14:45:07] Last EH closed, waiting before shutting down
+Last EH closed, shutting down
+[14:50:07] Last EH closed, shutting down

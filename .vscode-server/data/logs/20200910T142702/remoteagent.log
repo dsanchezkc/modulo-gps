@@ -1,0 +1,34 @@
+[2020-09-10 14:27:02.721] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2020-09-10 14:27:02.741] [remoteagent] [info] Extension host agent started.
+[2020-09-10 14:27:03.561] [remoteagent] [info] [127.0.0.1][5ee89658][ManagementConnection] New connection established.
+[2020-09-10 14:27:03.562] [remoteagent] [info] [127.0.0.1][c27e3bbe][ExtensionHostConnection] New connection established.
+[2020-09-10 14:27:03.627] [remoteagent] [info] [127.0.0.1][c27e3bbe][ExtensionHostConnection] <3075> Launched Extension Host Process.
+[2020-09-10 14:27:30.107] [remoteagent] [info] [127.0.0.1][5ee89658][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-09-10 14:27:31.128] [remoteagent] [info] [127.0.0.1][c27e3bbe][ExtensionHostConnection] <3075> Extension Host Process exited with code: 0, signal: null.
+[2020-09-10 14:27:31.128] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2020-09-10 14:27:33.009] [remoteagent] [info] Got delay-shutdown request while in shutdown timeout, delaying
+[2020-09-10 14:27:33.010] [remoteagent] [info] Cancelling previous shutdown timeout
+[2020-09-10 14:27:33.481] [remoteagent] [info] [127.0.0.1][9d7c30ce][ManagementConnection] New connection established.
+[2020-09-10 14:27:33.485] [remoteagent] [info] [127.0.0.1][9ca463df][ExtensionHostConnection] New connection established.
+[2020-09-10 14:27:33.493] [remoteagent] [info] [127.0.0.1][9ca463df][ExtensionHostConnection] <3213> Launched Extension Host Process.
+[2020-09-10 14:27:36.852] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-09-10 14:32:04.651] [remoteagent] [info] Installing extension: ms-python.python
+[2020-09-10 14:32:05.673] [remoteagent] [info] Downloaded extension: ms-python.python /home/centos/.vscode-server/data/CachedExtensionVSIXs/ms-python.python-2020.8.108011
+[2020-09-10 14:32:09.470] [remoteagent] [info] Extracted extension to /home/centos/.vscode-server/extensions/.ms-python.python-2020.8.108011: ms-python.python
+[2020-09-10 14:32:09.471] [remoteagent] [info] Renamed to /home/centos/.vscode-server/extensions/ms-python.python-2020.8.108011
+[2020-09-10 14:32:09.481] [remoteagent] [info] Installation completed. ms-python.python
+[2020-09-10 14:32:09.492] [remoteagent] [info] Extensions installed successfully: ms-python.python
+[2020-09-10 14:32:33.010] [remoteagent] [info] New EH opened, aborting shutdown
+[2020-09-10 14:45:06.540] [remoteagent] [info] [127.0.0.1][9d7c30ce][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-09-10 14:45:07.574] [remoteagent] [info] [127.0.0.1][9ca463df][ExtensionHostConnection] <3213> Extension Host Process exited with code: 0, signal: null.
+[2020-09-10 14:45:07.575] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2020-09-10 14:50:07.618] [remoteagent] [info] Last EH closed, shutting down

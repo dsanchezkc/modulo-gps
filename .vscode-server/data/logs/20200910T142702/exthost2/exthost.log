@@ -1,0 +1,18 @@
+[2020-09-10 14:27:35.527] [exthost] [info] extension host started
+[2020-09-10 14:27:35.654] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":false,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"onAuthenticationRequest:github"}
+[2020-09-10 14:27:35.655] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/github-authentication/dist/extension.js
+[2020-09-10 14:27:35.698] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-09-10 14:27:35.698] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/debug-auto-launch/dist/extension
+[2020-09-10 14:27:35.724] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-09-10 14:27:35.724] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/emmet/dist/node/emmetNodeMain
+[2020-09-10 14:27:35.775] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-09-10 14:27:35.775] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/git/dist/main
+[2020-09-10 14:27:35.911] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-09-10 14:27:35.911] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/merge-conflict/dist/mergeConflictMain
+[2020-09-10 14:27:35.937] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-09-10 14:27:35.937] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/search-result/dist/extension.js
+[2020-09-10 14:27:37.339] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-09-10 14:27:37.339] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/github/dist/extension.js
+[2020-09-10 14:27:37.488] [exthost] [info] eager extensions activated
+[2020-09-10 14:44:42.318] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2020-09-10 14:44:42.319] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/centos/.vscode-server/bin/a0479759d6e9ea56afa657e454193f72aef85bd0/extensions/html-language-features/client/dist/node/htmlClientMain

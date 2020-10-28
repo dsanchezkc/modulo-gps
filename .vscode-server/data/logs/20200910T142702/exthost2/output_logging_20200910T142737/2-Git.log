@@ -1,0 +1,222 @@
+Looking for git in: git
+Using git 1.8.3.1 from git
+> git rev-parse --git-dir
+Open repository: /home/centos/project/workspace/staff_est
+> git fetch
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+From https://github.com/Init-7/staff_est
+   20e4b04..ac6f0d9  deploy-up  -> origin/deploy-up
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :est/views.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/views.py
+> git cat-file -s 6a81423a67486f870e1858868c0af7df52af6a53
+> git show --textconv :est/tests.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/tests.py
+> git cat-file -s 7ce503c2dd97ba78597f6ff6e4393132753573f6
+> git show --textconv :est/urls.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/urls.py
+> git cat-file -s 37eb7b145a32888a85460dca21ed47ea483f24a5
+> git show --textconv :est/models.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/models.py
+> git cat-file -s 14aa6bb0485e06c0d629a038f98cb519aa2bae78
+> git show --textconv :est/apps.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/apps.py
+> git cat-file -s 0be262dfba17f3999e3a9d0116180b823da794a7
+> git show --textconv :est/lib.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/lib.py
+> git cat-file -s 91d5245ecea8d3df686ae3caa8dd38bca94aa4be
+> git show --textconv :est/admin.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/admin.py
+> git cat-file -s e154244188ea34c886968ad74279190934fd8208
+> git check-ignore -v -z --stdin
+> git show --textconv :geodjango_test/settings.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/geodjango_test/settings.py
+> git cat-file -s d8da5a8d02d541dde5899ceffc2203e1d4b97d7a
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git fetch
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/geodjango_test/settings.py
+> git cat-file -s d8da5a8d02d541dde5899ceffc2203e1d4b97d7a
+> git show --textconv :geodjango_test/settings.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git fetch
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :geodjango_test/settings-lautaro.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/geodjango_test/settings-lautaro.py
+> git cat-file -s fee693dcca012b03d35ea2f4e62777751e98c7fc
+> git show --textconv :geodjango_test/settings-deploy.py
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/geodjango_test/settings-deploy.py
+> git cat-file -s 40f3dac163501b5800c4c2595dc6342014fd8b8e
+> git fetch
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/geodjango_test/settings-deploy.py
+> git cat-file -s 40f3dac163501b5800c4c2595dc6342014fd8b8e
+> git show --textconv :geodjango_test/settings-deploy.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git fetch
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/geodjango_test/settings-deploy.py
+> git cat-file -s 40f3dac163501b5800c4c2595dc6342014fd8b8e
+> git show --textconv :geodjango_test/settings-deploy.py
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/centos/project/workspace/staff_est/geodjango_test/settings-deploy.pdf
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :est/templates/cv/card.html
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/templates/cv/card.html
+> git cat-file -s 16a9cedf5f78a4669f4eb62b689eb246f9e26d6c
+> git fetch
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/templates/cv/card.html
+> git cat-file -s 16a9cedf5f78a4669f4eb62b689eb246f9e26d6c
+> git show --textconv :est/templates/cv/card.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse deploy-up
+> git rev-parse --symbolic-full-name deploy-up@{u}
+error: No upstream configured for branch 'deploy-up'
+error: No upstream configured for branch 'deploy-up'
+fatal: ambiguous argument 'deploy-up@{u}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :est/templates/cv/machine.html
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/templates/cv/machine.html
+> git cat-file -s 3be42296b8bd313cc8e5c160832ee531a1713cd4
+> git show --textconv :est/templates/cv/card.html
+> git ls-files --stage -- /home/centos/project/workspace/staff_est/est/templates/cv/card.html
+> git cat-file -s 16a9cedf5f78a4669f4eb62b689eb246f9e26d6c
