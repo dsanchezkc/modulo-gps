@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>EST |{{ trabajador.primer_nombre}} {{ trabajador.primer_nombre}} {{trabajador.apellidop}} {{trabajador.apellidom}}</title>
+  {% load staticfiles %}
+  <!-- CSS Files
+  ========================================================= -->
+  <!-- Google web fonts - Open Sans -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <!-- /Google web fonts -->
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'cv/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- /Bootstrap CSS -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'cv/vendor/font-awesome/css/font-awesome.min.css' %}">
+  <!-- /Font Awesome -->
+  <!-- Nivo Lightbox -->
+  <link href="{% static 'cv/vendor/nivo-lightbox/nivo-lightbox.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'cv/vendor/nivo-lightbox/themes/default/default.css' %}" type="text/css" />
+  <!-- /Nivo Lightbox -->
+  <!-- Animate CSS -->
+  <link href="{% static 'cv/vendor/animate.css' %}" rel="stylesheet">
+  <!-- /Animate CSS -->
+  <!-- Theme Styles -->
+  <link href="{% static 'cv/css/styles.css' %}" rel="stylesheet">
+  <!--<link href="css/theme-builder.css" rel="stylesheet">-->
+  <!-- Theme Styles -->
+  <!-- / CSS Files
+  ========================================================= -->
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicon and Touch Icons
+  ========================================================= -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
+<!--  <link href="apple-touch-icon-144.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+  <link href="apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+  <link href="apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+  <link href="apple-touch-icon-57.png" rel="apple-touch-icon-precomposed">-->
+  <!-- /Favicon
+  ========================================================= -->
+</head>
+
+<body data-spy="scroll" data-target="#side-menu">
+
+
+<!-- CONTENT
+========================================================= -->
+<section id="content-body" class="container animated">
+  <div class="row" id="intro">
+
+    <!-- Header Colors -->
+    <div class="col-md-10 col-sm-10  col-md-offset-2 col-sm-offset-1 clearfix top-colors">
+      <div class="top-color top-color1"></div>
+      <div class="top-color top-color3"></div>
+      <div class="top-color top-color1"></div>
+      <div class="top-color top-color3"></div>
+      <div class="top-color top-color1"></div>
+
+    </div>
+    <!-- /Header Colors -->
+
+    <!-- Beginning of Content -->
+    <div class="col-md-10 col-sm-10 col-md-offset-2 col-sm-offset-1 resume-container">
+
+      <!-- Header Buttons -->
+      <div class="row">
+    <img src="{%static 'cv/img/logo.png' %}" alt="logo-est" style="width:200px;height:100px;">
+        <div class="header-buttons col-md-10 col-md-offset-1">
+          <!-- Download Resume Button -->
+          <a href="#" class="btn btn-default btn-top-resume"><i class="fa fa-download"></i><span class="btn-hide-text">Descargar PDF</span></a>
+          <!-- /Download Resume Button -->
+          <!-- Mail Button -->
+          <a href="#" class="btn btn-default btn-top-message"><i class="fa fa-envelope-o"></i><span class="btn-hide-text">Ver Tarjeta</span></a>
+          <!-- /Mail Button -->
+        </div>
+      </div>
+      <!-- /Header Buttons -->
+
+      <!-- =============== PROFILE INTRO ====================-->
+      <div class="profile-intro row">
+        <!-- Left Collum with Avatar pic -->
+        <div class="col-md-4 profile-col">
+          <!-- Avatar pic -->
+          <div class="profile-pic">
+            <div class="profile-border">
+              <!-- Put your picture here ( 308px by 308px for retina display)-->
+<!--              <img src="img/avatar.jpg" alt=""> -->
+              <img src="{{trabajador.foto.url}}" alt="Foto de {{ trabajador.nombre}} {{trabajador.apellidop}}">
+              <!-- /Put your picture here -->
+            </div>
+          </div>
+           <!-- /Avatar pic -->
+        </div>
+        <!-- /Left columm with avatar pic -->
+
+        <!-- Right Columm -->
+        <div class="col-md-7">
+          <!-- Welcome Title-->
+          <h1 class="intro-title1"><span class="color1 bold">{{trabajador.primer_nombre}} {{ trabajador.apellidop}} </span></h1>
+          <!-- /Welcome Title -->
+          <!-- Job - -->
+          <h2 class="intro-title2">{{trabajador.cargo}}</h2>
+          <!-- /job -->
+<!--
+		  <p><strong>Turpis, sit amet iaculis dui consectetur at.</strong> Cras sagittis molestie orci. <strong>Suspendisse ut laoreet mi</strong>. Phasellus eu tortor vehicula, blandit enim eu, auctor massa. Nulla ultricies tortor dolor, sit amet suscipit enim <strong>condimentum id</strong>. Etiam eget iaculis tellus.  Varius sit amet.</p>
+-->
+        </div>
+        <!-- /Right Collum -->
+      </div>
+      <!-- ============  /PROFILE INTRO ================= -->
+
+      <!-- ============  TIMELINE ================= -->
+      <div class="timeline-wrap">
+        <div class="timeline-bg">
+
+        <!-- ====>> SECTION: INTERESTS <<====-->
+          <section class="timeline" id="interests">
+
+            <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+            <div class="line row timeline-margin">
+              <div class="content-wrap">
+                <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+                <div class="col-md-9 bg1 full-height"></div>
+              </div>
+            </div>
+            <!-- /VERTICAL MARGIN -->
+
+            <!-- SECTION TITLE -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height"></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <!-- Section title -->
+                <h2 class="section-title">En caso de emergencia</h2>
+                <!-- /Section title -->
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION TITLE -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+                  <h3 class="section-item-title-1">Salud</h3>
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <p><font size="5" color="red"><b>Alergias:</b> Ninguna</font></br></p>
+                  <p><font size="5" color="red"><b>Enfermedad:</b> Asma Cronico, Hipertención</font></br></p>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+                  <h3 class="section-item-title-1">Notificar a:</h3>
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <p><b>{{ trabajador.emergencia.nombre }}</b></p>
+                  <p><b>Fono: </b> {{ trabajador.emergencia.fono }}</p>
+                  <p><b>Ocupación: </b> {{ trabajador.emergencia.nota }}</p>
+                  <p><b>Relación: </b>{{ trabajador.tipo_contacto}}</p>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+          </section>
+          <!-- ==>> /SECTION: INTERESTS -->
+
+
+          <!-- ====>> SECTION: PROFILE INFOS <<====-->
+          <section class="timeline profile-infos">
+
+            <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+            <div class="line row timeline-margin">
+              <div class="content-wrap">
+                <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+                <div class="col-md-9 bg1 full-height"></div>
+              </div>
+            </div>
+            <!-- /VERTICAL MARGIN -->
+
+                        <!-- SECTION TITLE -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height"></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <!-- Section title -->
+                <h2 class="section-title">Información Personal</h2>
+                <!-- /Section title -->
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION TITLE -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+                  <h3 class="section-item-title-1">Nombre Completo</h3>
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <p>{{ trabajador.primer_nombre }} {{ trabajador.segundo_nombre }} {{trabajador.apellidop}} {{trabajador.apellidom}}</p>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+                  <h3 class="section-item-title-1">Dirección</h3>
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <p>{{ trabajador.direccion }}</p>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+
+
+             <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+                  <h3 class="section-item-title-1">Teléfono</h3>
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <p>{{ trabajador.fono }}</p>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+                  <h3 class="section-item-title-1">Fecha Nacimiento</h3>
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <p>{{ trabajador.fecha_nac.day|stringformat:"02d" }}-{{ trabajador.fecha_nac.month|stringformat:"02d" }}-{{ trabajador.fecha_nac.year }}</p>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+                  <h3 class="section-item-title-1">Email</h3>
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <p>{{ trabajador.e_mail }}</p>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collums -->
+            </div>
+            <!-- /SECTION ITEM -->
+
+          </section>
+          <!-- ==>> /SECTION: PROFILE INFOS -->
+
+          <!-- ====>> SECTION: EDUCATION <<====-->
+          <section class="timeline education" id="education">
+
+            <!-- Margin (necessary for the timeline effect) -->
+            <div class="line row timeline-margin">
+              <div class="content-wrap">
+                <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+                <div class="col-md-9 bg1 full-height"></div>
+              </div>
+            </div>
+            <!-- /Margin -->
+
+            <!-- SECTION TITLE -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height">
+              </div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <!-- Section title -->
+                <h2 class="section-title">Estudios</h2>
+                <!-- /Section title -->
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION TITLE -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-education "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content line-content-education">
+                  <!-- Graduation title -->
+                  <h3 class="section-item-title-1">Tecnico nivel Superior en Electricidad Industrial</h3>
+                  <!-- /Graduation title -->
+                  <!-- Graduation time -->
+                  <h4 class="graduation-time"><i class="fa fa-university"></i> Inacap <span class="graduation-date">Talca - Cursando</span></h4>
+                  <!-- /Graduation time -->
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum -->
+            </div>
+            <!-- /SECTION ITEM -->
+
+          </section>
+          <!-- ==>> /SECTION: EDUCATION <<==== -->
+
+          <!-- ====>> SECTION: WORK EXPERIENCE <<====-->
+          <section class="timeline work-experience" id="works">
+
+            <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+            <div class="line row timeline-margin">
+              <div class="content-wrap">
+                <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+                <div class="col-md-9 bg1 full-height"></div>
+              </div>
+            </div>
+            <!-- /VERTICAL MARGIN -->
+
+            <!-- SECTION TITLE -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height"></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <!-- Section title -->
+                <h2 class="section-title">Capacitaciones</h2>
+                <!-- /Section title -->
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION TITLE -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-work "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content line-content-education">
+                  <!-- Work Place -->
+                  <h3 class="section-item-title-1">Operación Segura de Puente Grua</h3>
+                  <!-- /work place -->
+                  <!-- Graduation time -->
+                  <h4 class="job"><i class="fa fa-flag"></i> ASGEM LTDA, Capacitaciones Laborales <span class="job-date">Enero 2016</span></h4>
+                  <!-- /Graduation time -->
+                  <!-- Graduation time -->
+                  <h4 class="job"><i class="fa fa-flag"></i> 12 Horas <span class="job-date">Modalidad: Presencial</span></h4>
+                  <!-- /Graduation time -->
+
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-work "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content line-content-education">
+                  <!-- Work Place -->
+                  <h3 class="section-item-title-1">Orientación en Prevensión de Riesgos</h3>
+                  <!-- /work place -->
+                  <!-- Graduation time -->
+                  <h4 class="job"><i class="fa fa-flag"></i>Mutual C.CH.C <span class="job-date">Talca 2016</span></h4>
+                  <!-- /Graduation time -->
+                  <!-- Graduation time -->
+                  <h4 class="job"><i class="fa fa-flag"></i> 12 Horas<span class="job-date">Modalidad: Online</span></h4>
+                  <!-- /Graduation time -->
+
+                </div>
+              </div>
+              <!-- /Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+
+          </section>
+          <!-- ==>> /SECTION: WORK EXPERIENCE <<==== -->
+
+          <!-- ====>> SECTION: SKILLS <<====-->
+          <section class="timeline skills" id="skills">
+
+            <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+            <div class="line row timeline-margin">
+              <div class="content-wrap">
+                <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+                <div class="col-md-9 bg1 full-height"></div>
+              </div>
+            </div>
+            <!-- /VERTICAL MARGIN -->
+
+
+
+
+           <!-- ====>> SECTION: PORTFOLIO <<====-->
+          <section class="timeline portfolio" id="portfolio">
+
+            <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+            <div class="line row timeline-margin">
+              <div class="content-wrap">
+                <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+                <div class="col-md-9 bg1 full-height"></div>
+              </div>
+            </div>
+            <!-- /VERTICAL MARGIN -->
+
+            <!-- SECTION TITLE -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height"></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <!-- Section title -->
+                <h1 class="section-title">Certificados</h1>
+                <!-- /Section title -->
+              </div>
+              <!-- Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION TITLE -->
+
+            <!-- SECTION ITEM -->
+            <div class="line row">
+              <!-- Margin Collums (necessary for the timeline effect) -->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+              <!-- /Margin Collums -->
+              <!-- Item Content -->
+              <div class="col-md-8 content-wrap bg1">
+                <div class="line-content">
+                  <!-- Subtitle -->
+<!--                  <h3 class="section-item-title-1">Cursos</h3>-->
+                  <!-- /Subtitle -->
+                  <!-- content -->
+                  <div class="portfolio-itens clearfix">
+                    <!-- Portfolio item -->
+                    <div class="portfolio-item">
+                      <!-- Link to the item image (Put the long description on  "a" title)-->
+                      <a href="img/portfolio-item1-photo-zoom.jpg" title="Operación Segura de Puente Grúa" class="nivobox" data-lightbox-gallery="portfolio">
+                        <div class="hover">
+                          <p class="zoomi"><i class="fa fa-search"></i></p>
+                          <!-- Item short title -->
+                          <p class="portfolio-item-title"><strong>Operación Segura de Puente Grúa</strong></p>
+                        </div>
+                        <div class="hover-bg-wrapper">
+                          <div class="hover-bg"></div>
+                        </div>
+                        <div class="portfolio-item-thumbnail">
+                          <!-- Thumbnail of the portfolio image (400x360 for retina display) -->
+                          <img src="img/portfolio-item1-photo-thumb.jpg" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <!-- /Portfolio item -->
+
+                  </div>
+                  <!-- /Content -->
+                </div>
+              </div>
+              <!-- Item Content -->
+              <!-- Margin Collum-->
+              <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+              <!-- /Margin Collum-->
+            </div>
+            <!-- /SECTION ITEM -->
+          </section>
+          <!-- ==>> /SECTION: PORTFOLIO -->
+
+        </div>
+      </div>
+      <!-- ============  /TIMELINE ================= -->
+
+      <!-- ============  FOOTER ================= -->
+      <footer id="footer" class="row">
+        <!-- Put your Quote Here-->
+        <p class="quote">“Primeros en Seguridad”</p>
+        <!-- /Quote -->
+        <!-- Quote Autor -->
+        <p class="author">EST Chile</p>
+        <!-- /Quote Autor -->
+      </footer>
+      <!-- ============  /FOOTER ================= -->
+    </div>
+  </div>
+</section>
+<!-- /CONTENT
+========================================================= -->
+
+
+<!-- Javascript Files
+========================================================= -->
+<!-- jQuery (necessary for plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- /jquery -->
+<!-- bootstrap -->
+<script src="{% static 'cv/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- /bootstrap -->
+<!-- easing -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<!-- /easing -->
+<!-- jQuery Mousewheel -->
+<script src="{% static 'cv/vendor/jquery.mousewheel.min.js' %}"></script>
+<!-- /jQuery Mousewheel -->
+<!-- jQuery Mousewheel Smoothscroll -->
+<script src="{% static 'cv/vendor/jquery.nicescroll.min.js' %}"></script>
+<script src="{% static 'cv/vendor/jquery.nicescroll.plus.js' %}"></script>
+<!-- /jQuery Mousewheel Smoothscroll -->
+<!-- Waypoints (for CSS3 animations) -->
+<script src="{% static 'cv/vendor/waypoints.min.js' %}"></script>
+<!-- /waypoints -->
+<!-- Modal box-->
+<script src="{% static 'cv/vendor/nivo-lightbox/nivo-lightbox.min.js' %}"></script>
+<!-- /Modal Box -->
+<!-- Carousel-->
+<script src="{% static 'cv/vendor/jquery.bxslider.min.js' %}"></script>
+<!-- /Carousel -->
+<!-- Front-end Validator (for forms) -->
+<script src="{% static 'cv/vendor/jquery.validate.min.js' %}"></script>
+<!-- /Front-end Validator -->
+<!-- placeholder Support for IE -->
+<script src="{% static 'cv/vendor/placeholders.jquery.min.js' %}"></script>
+<!-- /placeholder support -->
+<!-- Cross-browser -->
+<script src="{% static 'cv/js/cross-browser.js' %}"></script>
+<!-- /Cross-browser -->
+<!-- Configurations -->
+<script src="{% static 'cv/js/main.js' %}"></script>
+<!-- /Configurations -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53632119-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

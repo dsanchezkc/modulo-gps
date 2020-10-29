@@ -1,0 +1,31 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+<p>p</p>
+{% endblock %}
+
+{% block extrastyle %} # Here you can add your CSS
+
+<style>
+
+.module h2, .module caption, .inline-group h2,#header
+{   
+    margin: 0;
+    padding: 2px 5px 3px 5px;
+    font-size: 11px;
+    text-align: left;
+    font-weight: bold;
+    background: #7CA0C7 url(../img/default-bg.gif) top left repeat-x;
+    color: #fff;
+}
+
+</style>
+
+{% endblock %}
+
+
+
+{% block nav-global %}{% endblock %}

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+	<!--//version 05/07/16 15.17 hrs-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+	<link rel="icon" href="images/favicon2.png">
+	<title>::ESTChile:: SISTEMA DE MONITOREO DE SEGURIDAD GPS</title>
+	{% load staticfiles %}
+	<!-- Load estilos-->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css" />
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<link rel="stylesheet" href="{% static 'home/css/layout.css' %}">
+	<link rel="stylesheet" href="{% static 'home/css/Grid.css' %}" />
+	<link rel="stylesheet" href="{% static 'home/css/claroGrid.css' %}" />
+	<link rel="stylesheet" href="{% static 'home/css/dojo.css' %}" />
+	<link rel="stylesheet" href="{% static 'home/css/claro.css' %}" />
+	<link rel="stylesheet" href="{% static 'home/css/style.css' %}" media="screen">
+	<link rel="stylesheet" href="{% static 'home/dist/leaflet.label.css' %}"></script>
+	<!-- <link rel="stylesheet" href="css/demo.css" media="screen">-->
+
+	<!-- Load externo -->
+
+	<!--En caso de fallar la web de leaflet <script src="js/leaflet.js"></script>-->
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<!-- Load externo GeoJson Leaflet-->
+	<script type="text/javascript" src="{% static 'home/dist/leaflet.ajax.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/dist/leaflet.label.js' %}"></script>
+
+	<script src="{% static 'home/js/leaflet-heat.js' %}"></script>
+
+	<script src="{% static 'home/js/pruneCluster/PruneCluster.js' %}"></script>
+	<script src="{% static 'home/js/leaflet-realtime.js' %}"></script>
+	<script src="{% static 'home/js/spin.js' %}"></script>
+	<script src="{% static 'home/js/leaflet.spin.js' %}"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true, parseOnLoad: true"></script>
+	<script type="text/javascript" src="//maps.google.com/maps/api/js?v=3&key=AIzaSyBQz37-lYY1_Bl9B69tYqGGHSdwankrues"></script>
+	<script src="{% static 'home/js/Bing.js' %}"></script>
+	<script src="{% static 'home/js/Google.js' %}"></script>
+	<script src="{% static 'home/js/layout_amd_sms.js' %}"></script>
+
+	<link rel="stylesheet" href="{% static 'home/examples.css' %}"/>
+
+</head>
+<body class="claro">
+	<input style="display: none" id="lat" name="lat" value={{ lat }} >
+	<input style="display: none" id="lon" name="lon" value={{ lon }} >
+	<input style="display: none" id="nombre" name="nombre" value={{ nombre }} >
+	<input style="display: none"  id="apellidop" name="apellidop" value={{ apellidop }} >
+	<input style="display: none"  id="apellidom" name="apellidom" value={{ apellidom }} >
+	<input style="display: none"  id="nro" name="nro" value={{ fono }}>
+	<input style="display: none"  id="cargo" name="cargo" value={{ cargo }}>
+	<input style="display: none"  id="nivel_riesgo" name="nivel_riesgo" value={{ nivel_riesgo }}>
+	<input style="display: none"  id="foto" name="foto" value={{ foto }}>
+	<input style="display: none"  id="fono_s" name="fono_s" value={{ fono_super }}>
+	<input style="display: none"  id="superv" name="superv" value={{ supervisor }}>
+	<input style="display: none"  id="supervp" name="supervp" value={{ supervisorp }}>
+	<!-- <input style="display: none"  id="cv" name="cv" value={{ cv }}> -->
+	<input style="display: none" id="hora" value={{ hora.day}}-{{ hora.month}}-{{ hora.year }}/{{ hora.hour}}:{{ hora.minute}}>
+
+	<div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:false" style="width: 100%; height: 100%;">
+		<!--MAP-->
+		<div id="map" class="roundedCorners shadow" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+			<!--CABECERA-->
+			<div id="header" class="roundedCorners shadow" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="minSize:800,region:'top'">
+				<a class="logoLeft" href="http://cloud2.estchile.cl/" target="_blank">
+					<img id="h-logo-EST" src="{% static 'home/images/estchile.png' %}" alt="EST Chile">
+				</a>
+				<div id="title">SISTEMA DE MONITOREO DE SEGURIDAD GPS</div>
+				<a class="logoRight" href="http://www.corfo.cl/" target="_blank">
+					<img id="h-logo-corfo" src="{% static 'home/images/logo-corfo.png' %}"  alt="Corfo | Corporación de Fomento de la Producción">
+				</a>
+			</div>
+			<div id="divALERTAS"> <!--span id="aviso">ALERTA!!.</span>--> </div>
+			<img id="logoMap" src="{% static 'home/images/estchile.png' %}" style="max-height: 75px;">
+		</div>
+		<input  id="backButton" type="button" value="Volver" onClick="location.href='http://staff.estchile.cl/gps/'" />
+
+		<!--FIN PANEL DERECHO-->
+	</div>
+</body>
+</html>

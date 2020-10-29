@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+
+	<style type="text/css">
+
+	body{
+		margin: 0px;
+		width: 325px;
+	}
+
+	#wrapper{
+		height: 204px;    
+	    width: 325px;
+	    float: left;   
+	}	
+
+	#logoEst{
+		display: flex;
+	    float: left;
+	    height: 50px;
+	    width: 100px;
+	    //margin-left: 5px;
+	    //margin-top: 5px;
+	}
+
+	#imgTrabajador{
+	    float: left;
+	    height: 120px;
+	    //margin-left: 10px;
+	    width: 90px;
+	}
+	#imgQR{
+		float: right;
+	    height: 70px;
+	    //margin-top: 20px;
+	    padding-right: 20px;
+	    width: 70px;
+
+	}
+	#datosTrabajador{
+		float: right;
+	    font-family: caption;
+	    font-size: 8px;
+	    height: 90px;
+	    margin-top: 30px;
+	    width: 130px;
+	}
+
+	.leaflet-popup-content-wrapper {
+		background-image: linear-gradient(rgb(28, 45, 64) 10%, rgb(21, 58, 97) 100%) !important;
+	} 
+
+	</style>
+
+</head>
+
+<body>
+ 
+<div id="wrapper">
+	 {% load staticfiles %}
+	
+	<img id="logoEst" src="https://personal.hfgroup.cl/logo4.png" alt="logo-est" >
+	
+	<img id="imgQR" src="{% static trabajador.qrimg.url %}" alt="QR de {{trabajador.nombre}} {{trabajador.apellidop}} {{trabajador.apellidom}}"/> 
+	<div id="datosTrabajador">
+		<p><b>NOMBRE</b></br>
+		{{ trabajador.primer_nombre}} {{trabajador.apellidop}} {{ trabajador.apellidom}}
+
+		<p><b>CARGO</b></br>
+		{{ trabajador.cargo}}
+
+		<p><b>AUTORIZADO</b></br>
+		{{ trabajador.nota}}
+
+		<p><b>ÁREA</b></br>
+		{{ trabajador.nota2}}
+
+		<p><b>CONTACTO SUPERVISOR DIRECTO</b></br>
+		{{trabajador.supervisor.primer_nombre}} {{trabajador.supervisor.apellidop}} {{trabajador.supervisor.fono}}
+	</div>
+
+	<img id="imgTrabajador" src="https://lh3.googleusercontent.com/proxy/cTb8QcosKi_c3GSiFkLzpjo9r8aNYlhsxdXxWyBDGzNhyuNOrfiaxOVhOm8GWa36qw-sO8WffUVPhXB62l87BJPoYqHn6-OUuGWV0l_9_SgE" alt="Foto de {{trabajador.nombre}} {{trabajador.apellidop}} {{trabajador.apellidom}}">
+		
+</div>
+</body>
+
+</html> 

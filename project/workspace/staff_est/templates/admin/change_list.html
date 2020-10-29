@@ -1,0 +1,158 @@
+{% extends "admin/change_list.html" %}
+
+{% block extrastyle %}
+<style type="text/css">
+    #header {
+        display: none;
+    }
+    .breadcrumbs {
+        display: none;
+    }
+
+</style>
+{% endblock %}
+{% block sidebar %}
+            {% load staticfiles %}
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="{% static 'plantas/dataTables.bootstrap4.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'plantas/sb-admin-2.min.css' %}" />
+    <script src="{% static 'plantas/jquery.min.js' %}" ></script>
+    <script src="{% static 'plantas/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'plantas/jquery.easing.min.js' %}" ></script>
+    <script src="{% static 'plantas/sb-admin-2.min.js' %}" ></script>
+    <style type="text/css">
+    .form-row {
+        display:    block;  
+            margin-bottom: 1rem !important;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    ul {
+        list-style-type: none;
+    }
+    .navbar {
+        position: fixed;
+        top:0;
+        width: 88vw;
+        left: 14rem !important;
+    }
+    .sidebar {
+        position: fixed;
+        left:0;
+        height: 100% !important;
+        top:0px;
+        z-index: 1;
+
+    }
+    #content {
+        margin-left: 14rem !important;
+        margin-top: 4.375rem !important;
+    }
+    .sidebar-divider {
+        opacity: 0.2;
+    }
+    #content-main {
+        padding-top: 3vh;
+    }
+    label {
+        display: flex;
+    }
+</style>
+    <!-- Custom fonts for this template-->
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://personal.hfgroup.cl/home">
+                
+                <img src="https://personal.hfgroup.cl/logo2.png" width="100" height="100">
+            </a>
+
+
+            <!--<div class="sidebar-heading">Configuraci&oacute;n</div>-->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Módulo 1</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!--<h6 class="collapse-header">Custom Components:</h6>-->
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante" title="Aquí debes completar quien les contrató los servicios como empresa Contratista">Empresa mandante</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/contrato" title="Aquí debes completar cual es el número y datos de contrato adjudicado, para más de un contrato, debes guardar la información y crear otro">Contratos</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/labor" title="Se debe indicar los detalles específicos de alguno de los contratos guardados, completando todas las celdas solicitadas">Labores</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/trabajador" title="Datos de los trabajadores contratados y en proceso de contratación, identificando a que contrato pertenecen">Trabajadores</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/desvinculado">Desvinculaciones</a>
+                        <hr class="sidebar-divider">
+                                                
+                    </div>
+                    
+                </div>
+            </li>
+                        <hr class="sidebar-divider my-3">
+                                <li class="nav-item">
+                <a class="nav-link collapsed" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Módulo 5</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!--<h6 class="collapse-header">Custom Components:</h6>-->
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/">Monitoreo GPS</a>
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/adminplantas/">Plantas</a>
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/adminzonas/">Zonas</a>
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/adminareas/">Areas</a>
+                        <hr class="sidebar-divider">
+                                                
+                    </div>
+                    
+                </div>
+            </li>
+                        <hr class="sidebar-divider my-3">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        
+                        
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario
+                        </span>
+                               
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+
+{% endblock %}

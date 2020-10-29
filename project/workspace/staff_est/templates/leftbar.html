@@ -1,0 +1,90 @@
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    {% load staticfiles %}
+    <!-- Custom fonts for this template-->
+
+    <script src="{% static 'plantas/jquery.min.js' %}" ></script>
+    <script src="{% static 'plantas/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'plantas/jquery.easing.min.js' %}" ></script>
+    <script src="{% static 'plantas/sb-admin-2.min.js' %}" ></script>
+    <style type="text/css">
+    .sidebar-divider{
+        border-top: 1px solid rgba(255,255,255,.15);
+        }
+    .bg-gradient-primary{
+            background-image: linear-gradient(180deg, #1c2d40 10%, #153a61 100%);
+        }
+    .fas {
+        margin-right: 4px;
+    }
+
+    .sidebar #sidebarToggle::after {
+        font-family: 'Font Awesome 5 Pro' !important;
+    }
+    </style>
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://personal.hfgroup.cl/home">
+                
+                <img src="https://personal.hfgroup.cl/logo4.png" width="224" height="59">
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-3">
+
+            <!--<div class="sidebar-heading">Configuraci&oacute;n</div>-->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-list-alt"></i>
+                    <span>Módulo 1</span>
+                </a>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!--<h6 class="collapse-header">Custom Components:</h6>-->
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante" title="Aquí debes completar quien les contrató los servicios como empresa Contratista"><i class="fas fa-fw fa-suitcase"></i>Empresa mandante</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/contrato" title="Aquí debes completar cual es el número y datos de contrato adjudicado, para más de un contrato, debes guardar la información y crear otro"><i class="fas fa-fw fa-folder-open"></i>Contratos</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/labor" title="Se debe indicar los detalles específicos de alguno de los contratos guardados, completando todas las celdas solicitadas"><i class="fas fa-fw fa-cubes"></i>Labores</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/trabajador" title="Datos de los trabajadores contratados y en proceso de contratación, identificando a que contrato pertenecen"><i class="fas fa-fw fa-users"></i>Trabajadores</a>
+                        <a class="collapse-item" href="https://personal.hfgroup.cl/mantenedores/desvinculado"><i class="fas fa-fw fa-times"></i>Desvinculaciones</a>
+                        <hr class="sidebar-divider">
+                                                
+                    </div>
+                    
+                </div>
+            </li>
+                <hr class="sidebar-divider my-3">
+                                <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-list-alt"></i>
+                    <span>Módulo 5</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!--<h6 class="collapse-header">Custom Components:</h6>-->
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/">Monitoreo GPS</a>
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/adminplantas/">Plantas</a>
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/adminzonas/">Zonas</a>
+                        <a class="collapse-item" href="http://staff.estchile.cl/gps/reportes/">Reportes</a>
+                        <hr class="sidebar-divider">
+                                                
+                    </div>
+                    
+                </div>
+            </li>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+    

@@ -1,0 +1,286 @@
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="csrf-token" content="eCb75r8pGZC1EydVnO4vQCaV0AwIEvgf7m7lJ6kT">
+
+    <title>Chec Time - Tu negocio en un clic</title>
+    {% load staticfiles %}
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="{% static 'plantas/all.min.css' %}" rel="stylesheet" type='text/css' />
+    <link rel="stylesheet" href="{% static 'plantas/dataTables.bootstrap4.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'plantas/sb-admin-2.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'plantas/plantas/toastr.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'plantas/plantas/jquery.loadingModal.min.css' %}" />
+
+    <!-- Custom styles for this template-->
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            {% block sidebar %}
+     {% include "leftbar.html" %}
+{% endblock %}
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        
+                        
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario
+                        </span>
+                                <span class="glyphicon glyphicon-user"></span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    
+    <h1 class="h3 mb-4 text-gray-800">Plantas</h1>
+
+        
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-12">
+
+                <form action="" method="POST" class="d-inline">
+
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Agregar Planta</h6>
+
+                    </div>
+                    <div >
+                       <button style="margin-top:10px;height: 40px;width: 160px;margin-right: 30px" type="button" class="btn btn-primary btn-block float-right"  onclick="location.href = '/admin/est/planta/add/';">Crear nueva planta</button> 
+                    </div>
+                    
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Plantas existentes</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="dataTable_length"><label>Mostrar <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div></div><div class="col-sm-12 col-md-6"><div id="dataTable_filter" class="dataTables_filter"><label>Buscar:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable no-footer" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Razón Social: Activar para ordenar la columna de manera descendente" aria-sort="ascending" style="width: 646px;">Nombre</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Acciones: Activar para ordenar la columna de manera ascendente" style="width: 507px;">Acciones</th></tr>
+                            </thead>
+                        <tbody>
+                        	{% for planta in plantas %}  
+						    <tr>  
+						        <td>{{ planta.nombre }}</td>  
+						        <td>  
+						            <button style="margin-top:0px;height: 40px;width: 160px;margin-right: 30px" type="button" class="btn btn-primary btn-block"  onclick="location.href = '/admin/est/planta/{{ planta.id }}/change';">Modificar</button>
+						        </td>  
+						    </tr>  
+							{% endfor %}  
+                        </tbody></table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Mostrando registros del 0 al 0 de un total de 0 registros</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="dataTable_previous"><a href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item next disabled" id="dataTable_next"><a href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">Siguiente</a></li></ul></div></div></div></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+
+
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <!--<span>Copyright &copy; Your Website 2020</span>-->
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
+                </div>
+                <!-- End of Content Wrapper -->
+
+            </div>
+            <!-- End of Page Wrapper -->
+
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="https://personal.hfgroup.cl/mantenedores/empresa-mandante#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Lista para terminar?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Seleccione "Logout" si está listo para terminar con su sesión actual.
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                            <a class="btn btn-primary" onclick="event.preventDefault();document.getElementById(&#39;logout-form&#39;).submit();">
+                            Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form id="logout-form" action="https://personal.hfgroup.cl/logout" method="POST" class="d-none">
+                <input type="hidden" name="_token" value="eCb75r8pGZC1EydVnO4vQCaV0AwIEvgf7m7lJ6kT">            </form>
+
+            <!-- Bootstrap core JavaScript-->
+
+
+                <script src="{% static 'plantas/jquery.min.js' %}" ></script>
+    <script src="{% static 'plantas/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'plantas/jquery.easing.min.js' %}" ></script>
+    <script src="{% static 'plantas/sb-admin-2.min.js' %}" ></script>
+
+            <!-- Page level plugins -->
+            <!-- <script src="https://personal.hfgroup.cl/vendor/chart.js/Chart.min.js"></script> -->
+
+         
+
+            <script>
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+            </script>
+
+            <script>
+    $(document).ready(function () {
+        $.LoadingOverlay("show");
+        cargarTabla();
+        $.LoadingOverlay("hide");
+
+        $('#dataTable tbody').on('click', '.btn-editar', function (e) {
+            $.LoadingOverlay("show");
+            var data = $('#dataTable').DataTable().row( $(this).parents('tr') ).data();
+            $.getJSON("https://personal.hfgroup.cl/empresas" + "/" + data.id, function (data) {
+                $('#id').val(data.id);
+                $('#rut').val(data.rut);
+                $('#razonsocial').val(data.razon_social);
+                $('#contacto').val(data.contacto);
+                $('#telefono').val(data.telefono);
+            });
+            $.LoadingOverlay("hide");
+        });
+
+        $('#dataTable tbody').on('click', '.btn-borrar', function (e) {
+            var data =  $('#dataTable').DataTable().row( $(this).parents('tr') ).data();
+            eliminar(data.id);
+        });
+    });
+
+    function cargarTabla() {
+        $('#dataTable').DataTable( {
+            destroy:true,
+            ajax: {
+                url: "https://personal.hfgroup.cl/empresas",
+                "dataSrc": ""
+            },
+            columns: [
+                { data: 'razon_social' },
+                { data: 'rut' },
+                { data: null } 
+            ],
+            "columnDefs": [ {
+            "targets": -1,
+            "data": null,
+            "defaultContent": "<center><button class='btn btn-primary btn-sm btn-editar'>Ver/Editar</button> <button class='btn btn-danger btn-sm btn-borrar'>Eliminar</button></center>"
+            } ],
+            responsive: true,
+            language: {
+                url: 'https://personal.hfgroup.cl/locales/datatables.json'
+            }
+        });
+    }
+
+    function eliminar(id) {
+        Swal.fire({
+            title: 'Esta seguro?',
+            text: "Esta acción no podrá revertirse",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, eliminar'
+        }).then((result) => {
+            if (result.value) {
+                $.LoadingOverlay("show");
+                $.ajax({
+                    url: 'https://personal.hfgroup.cl/empresas' + '/' + id,
+                    type: 'DELETE',
+                    success: function(result) {
+                        clearForms();
+                        cargarTabla();
+                        $.LoadingOverlay("hide");
+                        toastr.warning("Empresa eliminada");
+                    }  
+                });
+            }
+        });
+    }
+
+</script>
+
+            <script>
+                                                                                            </script>
+
+
+
+</div></div></body></html>
